@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_esg_challenge,access.esg.challenge,model_esg_challenge,,1,1,1,1
+access_esg_participation,access.esg.participation,model_esg_participation,,1,1,1,1
+access_esg_badge,access.esg.badge,model_esg_badge,,1,1,1,1
+access_esg_reward,access.esg.reward,model_esg_reward,,1,1,1,1

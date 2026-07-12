@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_participation_tree" model="ir.ui.view">
+        <field name="name">esg.participation.tree</field>
+        <field name="model">esg.participation</field>
+
+        <field name="arch" type="xml">
+            <tree>
+                <field name="employee_id"/>
+                <field name="challenge_id"/>
+                <field name="progress"/>
+                <field name="approved"/>
+                <field name="xp_awarded"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_participation_form" model="ir.ui.view">
+        <field name="name">esg.participation.form</field>
+        <field name="model">esg.participation</field>
+
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="employee_id"/>
+                        <field name="challenge_id"/>
+                        <field name="progress"/>
+                        <field name="proof"/>
+                        <field name="approved"/>
+                        <field name="xp_awarded"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_participation" model="ir.actions.act_window">
+        <field name="name">Participation</field>
+        <field name="res_model">esg.participation</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

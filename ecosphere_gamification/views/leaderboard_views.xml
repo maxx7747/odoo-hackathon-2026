@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_leaderboard_tree" model="ir.ui.view">
+        <field name="name">leaderboard.tree</field>
+        <field name="model">hr.employee</field>
+
+        <field name="arch" type="xml">
+            <tree default_order="xp desc">
+                <field name="name"/>
+                <field name="xp"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_leaderboard" model="ir.actions.act_window">
+        <field name="name">Leaderboard</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+</odoo>

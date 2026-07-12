@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_badge_tree" model="ir.ui.view">
+        <field name="name">esg.badge.tree</field>
+        <field name="model">esg.badge</field>
+
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="unlock_xp"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_badge_form" model="ir.ui.view">
+        <field name="name">esg.badge.form</field>
+        <field name="model">esg.badge</field>
+
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="unlock_xp"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_badge" model="ir.actions.act_window">
+        <field name="name">Badges</field>
+        <field name="res_model">esg.badge</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
