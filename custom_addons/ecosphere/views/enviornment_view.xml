@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="environment_tree_view" model="ir.ui.view">
+        <field name="name">environment.tree</field>
+        <field name="model">ecosphere.environment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="department_id"/>
+                <field name="emission"/>
+                <field name="target"/>
+                <field name="date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="environment_form_view" model="ir.ui.view">
+        <field name="name">environment.form</field>
+        <field name="model">ecosphere.environment</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="department_id"/>
+                        <field name="emission"/>
+                        <field name="target"/>
+                        <field name="date"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
