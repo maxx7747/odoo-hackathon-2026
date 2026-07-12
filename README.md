@@ -1,2 +1,2 @@
 # odoo-hackathon-2026
-# hi rushil  aka raxx here, wishing you all my team members the best... lets rock, many more hacathons to go with this team.(hoping)....
+
