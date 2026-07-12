@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="menu_esg_root"
+              name="ESG Gamification"
+              sequence="1"/>
+
+    <menuitem id="menu_challenge"
+              name="Challenges"
+              parent="menu_esg_root"
+              action="action_challenge"/>
+
+    <menuitem id="menu_participation"
+              name="Participation"
+              parent="menu_esg_root"
+              action="action_participation"/>
+
+    <menuitem id="menu_badge"
+              name="Badges"
+              parent="menu_esg_root"
+              action="action_badge"/>
+
+    <menuitem id="menu_reward"
+              name="Rewards"
+              parent="menu_esg_root"
+              action="action_reward"/>
+
+    <menuitem id="menu_leaderboard"
+              name="Leaderboard"
+              parent="menu_esg_root"
+              action="action_leaderboard"/>
+
+</odoo>
