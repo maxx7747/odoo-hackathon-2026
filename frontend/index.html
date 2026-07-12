@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EcoSphere — Governance Module</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">ES</div>
+      <div class="brand-text">
+        <span class="brand-name">EcoSphere</span>
+        <span class="brand-sub">Governance</span>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-item active" data-view="dashboard">
+        <span class="nav-dot"></span> Dashboard
+      </button>
+      <button class="nav-item" data-view="policies">
+        <span class="nav-dot"></span> Policies
+      </button>
+      <button class="nav-item" data-view="acknowledgements">
+        <span class="nav-dot"></span> Policy Acknowledgements
+      </button>
+      <button class="nav-item" data-view="audits">
+        <span class="nav-dot"></span> Audits
+      </button>
+      <button class="nav-item" data-view="compliance">
+        <span class="nav-dot"></span> Compliance Issues
+      </button>
+      <button class="nav-item" data-view="directory">
+        <span class="nav-dot"></span> Departments &amp; Employees
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      ESG Management Platform<br/>Governance Module
+    </div>
+  </aside>
+
+  <div class="main">
+
+    <header class="topbar">
+      <h1 id="view-title">Dashboard</h1>
+      <div class="topbar-actions">
+        <button class="icon-btn" id="notif-btn">
+          Notifications
+          <span class="notif-count" id="notif-count" hidden>0</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="content" id="content">
+      <!-- Views are rendered here by app.js -->
+    </main>
+
+  </div>
+</div>
+
+<!-- Notifications drawer -->
+<div class="drawer" id="notif-drawer">
+  <div class="drawer-header">
+    <h2>Notifications</h2>
+    <div class="drawer-actions">
+      <button class="text-btn" id="mark-all-read">Mark all read</button>
+      <button class="text-btn" id="close-drawer">Close</button>
+    </div>
+  </div>
+  <div class="drawer-body" id="notif-list"></div>
+</div>
+<div class="scrim" id="scrim"></div>
+
+<!-- Generic modal for forms -->
+<div class="modal-scrim" id="modal-scrim">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <h2 id="modal-title">Title</h2>
+      <button class="icon-close" id="modal-close">&times;</button>
+    </div>
+    <form id="modal-form" class="modal-body"></form>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

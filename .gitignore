@@ -1,0 +1,6 @@
+node_modules/
+backend/governance.db
+backend/governance.db-shm
+backend/governance.db-wal
+.DS_Store
+*.log
