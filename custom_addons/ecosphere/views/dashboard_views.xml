@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Dashboard Action -->
+    <record id="action_dashboard" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="res_model">ecosphere.department</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

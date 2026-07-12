@@ -8,9 +8,9 @@
             <tree>
                 <field name="name"/>
                 <field name="code"/>
-                <field name="head"/>
                 <field name="employee_count"/>
                 <field name="total_score"/>
+                <field name="manager"/>
             </tree>
         </field>
     </record>
@@ -21,18 +21,20 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
-                    <group>
-                        <field name="name"/>
-                        <field name="code"/>
-                        <field name="head"/>
-                        <field name="employee_count"/>
-                    </group>
+                 <group string="ESG Scores">
+                      <field name="environmental_score"/>
+                     <field name="social_score"/>
+                      <field name="governance_score"/>
+                     <field name="total_score"/>
+                      <field name="status" readonly="1"/>
+                </group>
 
                     <group string="ESG Scores">
                         <field name="environmental_score"/>
                         <field name="social_score"/>
                         <field name="governance_score"/>
                         <field name="total_score"/>
+                        <field name="status"/>
                     </group>
                 </sheet>
             </form>

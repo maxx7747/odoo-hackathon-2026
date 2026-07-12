@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-    <!-- Root Menu -->
+    <!-- ================= ROOT MENU ================= -->
+
     <menuitem
         id="menu_ecosphere_root"
         name="EcoSphere"
         sequence="1"/>
 
-    <!-- Dashboard -->
+    <!-- ================= DASHBOARD ================= -->
+
+    <record id="action_dashboard" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="res_model">ecosphere.department</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <menuitem
         id="menu_dashboard"
         name="Dashboard"
         parent="menu_ecosphere_root"
+        action="action_dashboard"
         sequence="1"/>
 
-    <!-- Master Data -->
+    <!-- ================= MASTER DATA ================= -->
+
     <menuitem
         id="menu_master"
         name="Master Data"
@@ -22,6 +32,7 @@
         sequence="2"/>
 
     <!-- Department -->
+
     <record id="action_department" model="ir.actions.act_window">
         <field name="name">Departments</field>
         <field name="res_model">ecosphere.department</field>
@@ -35,46 +46,76 @@
         action="action_department"
         sequence="1"/>
 
-    <!-- Environmental -->
+    <!-- ================= ENVIRONMENT ================= -->
+
     <menuitem
         id="menu_environment"
         name="Environmental"
         parent="menu_ecosphere_root"
         sequence="3"/>
-        <record id="action_environment" model="ir.actions.act_window">
-    <field name="name">Environmental Records</field>
-    <field name="res_model">ecosphere.environment</field>
-    <field name="view_mode">tree,form</field>
-</record>
 
-<menuitem
-    id="menu_environment_records"
-    name="Carbon Records"
-    parent="menu_environment"
-    action="action_environment"/>
+    <record id="action_environment" model="ir.actions.act_window">
+        <field name="name">Environmental Records</field>
+        <field name="res_model">ecosphere.environment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 
-    <!-- Social -->
+    <menuitem
+        id="menu_environment_records"
+        name="Carbon Records"
+        parent="menu_environment"
+        action="action_environment"/>
+
+    <!-- ================= SOCIAL ================= -->
+
     <menuitem
         id="menu_social"
         name="Social"
         parent="menu_ecosphere_root"
         sequence="4"/>
 
-    <!-- Governance -->
+    <record id="action_social" model="ir.actions.act_window">
+        <field name="name">Social Activities</field>
+        <field name="res_model">ecosphere.social</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_social_records"
+        name="Activities"
+        parent="menu_social"
+        action="action_social"/>
+
+    <!-- ================= GOVERNANCE ================= -->
+
     <menuitem
         id="menu_governance"
         name="Governance"
         parent="menu_ecosphere_root"
         sequence="5"/>
 
-    <!-- Reports -->
+    <record id="action_governance" model="ir.actions.act_window">
+        <field name="name">Governance Policies</field>
+        <field name="res_model">ecosphere.governance</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_governance_records"
+        name="Policies"
+        parent="menu_governance"
+        action="action_governance"/>
+
+    <!-- ================= REPORTS ================= -->
+
     <menuitem
         id="menu_reports"
         name="Reports"
         parent="menu_ecosphere_root"
         sequence="6"/>
 
-    <!-- Settings -->
+    <!-- ================= SETTINGS ================= -->
+
     <menuitem
         id="menu_settings"
         name="Settings"

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="dept_hr" model="ecosphere.department">
+        <field name="name">HR</field>
+        <field name="code">HR01</field>
+        <field name="manager">Alice</field>
+        <field name="employee_count">25</field>
+    </record>
+
+    <record id="dept_it" model="ecosphere.department">
+        <field name="name">IT</field>
+        <field name="code">IT01</field>
+        <field name="manager">Bob</field>
+        <field name="employee_count">50</field>
+    </record>
+
+</odoo>
