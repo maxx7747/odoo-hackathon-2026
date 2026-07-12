@@ -1,16 +1,33 @@
-from odoo import models, fields
+from odoo import models, fields, api
 
-class EcoDepartment(models.Model):
+class Department(models.Model):
     _name = "ecosphere.department"
     _description = "Department"
 
-    name = fields.Char(string="Department Name", required=True)
-    code = fields.Char(string="Department Code")
-    head = fields.Char(string="Department Head")
-    employee_count = fields.Integer(string="Employee Count")
+    name = fields.Char(required=True)
+    code = fields.Char()
+    manager = fields.Char()
 
-    environmental_score = fields.Float(string="Environmental Score")
-    social_score = fields.Float(string="Social Score")
-    governance_score = fields.Float(string="Governance Score")
+    employee_count = fields.Integer()
 
-    total_score = fields.Float(string="Total ESG Score")
+    environmental_score = fields.Float(default=0)
+    social_score = fields.Float(default=0)
+    governance_score = fields.Float(default=0)
+
+    total_score = fields.Float(
+        compute="_compute_total",
+        store=True
+    )
+
+    @api.depends(
+        "environmental_score",
+        "social_score",
+        "governance_score"
+    )
+    def _compute_total(self):
+        for rec in self:
+            rec.total_score = (
+                rec.environmental_score +
+                rec.social_score +
+                rec.governance_score
+            ) / 3
