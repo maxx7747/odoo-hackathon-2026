@@ -8,3 +8,4 @@ from . import environmental_record
 from . import social_activity
 from . import governance_policy
 from . import dashboard
+from . import social_activity

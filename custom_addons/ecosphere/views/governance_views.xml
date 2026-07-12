@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_governance_tree" model="ir.ui.view">
+        <field name="name">governance.tree</field>
+        <field name="model">ecosphere.governance</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="department_id"/>
+                <field name="compliance"/>
+                <field name="score"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_governance_form" model="ir.ui.view">
+        <field name="name">governance.form</field>
+        <field name="model">ecosphere.governance</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="department_id"/>
+                        <field name="compliance"/>
+                        <field name="audit_date"/>
+                        <field name="score"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

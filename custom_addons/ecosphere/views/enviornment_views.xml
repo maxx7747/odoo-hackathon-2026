@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-    <record id="environment_tree_view" model="ir.ui.view">
-        <field name="name">environment.tree</field>
+    <!-- Tree View -->
+    <record id="view_environment_tree" model="ir.ui.view">
+        <field name="name">ecosphere.environment.tree</field>
         <field name="model">ecosphere.environment</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name"/>
                 <field name="department_id"/>
                 <field name="emission"/>
                 <field name="target"/>
                 <field name="date"/>
-            </tree>
+            </list>
         </field>
     </record>
 
-    <record id="environment_form_view" model="ir.ui.view">
-        <field name="name">environment.form</field>
+    <!-- Form View -->
+    <record id="view_environment_form" model="ir.ui.view">
+        <field name="name">ecosphere.environment.form</field>
         <field name="model">ecosphere.environment</field>
         <field name="arch" type="xml">
             <form>

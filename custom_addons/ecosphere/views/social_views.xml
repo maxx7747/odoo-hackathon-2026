@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_social_tree" model="ir.ui.view">
+        <field name="name">social.tree</field>
+        <field name="model">ecosphere.social</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="department_id"/>
+                <field name="participants"/>
+                <field name="score"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_social_form" model="ir.ui.view">
+        <field name="name">social.form</field>
+        <field name="model">ecosphere.social</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="department_id"/>
+                        <field name="participants"/>
+                        <field name="activity_date"/>
+                        <field name="score"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
