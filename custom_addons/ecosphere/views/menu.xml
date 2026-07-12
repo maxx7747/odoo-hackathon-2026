@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Root Menu -->
+    <menuitem
+        id="menu_ecosphere_root"
+        name="EcoSphere"
+        sequence="1"/>
+
+    <!-- Dashboard -->
+    <menuitem
+        id="menu_dashboard"
+        name="Dashboard"
+        parent="menu_ecosphere_root"
+        sequence="1"/>
+
+    <!-- Master Data -->
+    <menuitem
+        id="menu_master"
+        name="Master Data"
+        parent="menu_ecosphere_root"
+        sequence="2"/>
+
+    <!-- Department -->
+    <record id="action_department" model="ir.actions.act_window">
+        <field name="name">Departments</field>
+        <field name="res_model">ecosphere.department</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_department"
+        name="Departments"
+        parent="menu_master"
+        action="action_department"
+        sequence="1"/>
+
+    <!-- Environmental -->
+    <menuitem
+        id="menu_environment"
+        name="Environmental"
+        parent="menu_ecosphere_root"
+        sequence="3"/>
+        <record id="action_environment" model="ir.actions.act_window">
+    <field name="name">Environmental Records</field>
+    <field name="res_model">ecosphere.environment</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<menuitem
+    id="menu_environment_records"
+    name="Carbon Records"
+    parent="menu_environment"
+    action="action_environment"/>
+
+    <!-- Social -->
+    <menuitem
+        id="menu_social"
+        name="Social"
+        parent="menu_ecosphere_root"
+        sequence="4"/>
+
+    <!-- Governance -->
+    <menuitem
+        id="menu_governance"
+        name="Governance"
+        parent="menu_ecosphere_root"
+        sequence="5"/>
+
+    <!-- Reports -->
+    <menuitem
+        id="menu_reports"
+        name="Reports"
+        parent="menu_ecosphere_root"
+        sequence="6"/>
+
+    <!-- Settings -->
+    <menuitem
+        id="menu_settings"
+        name="Settings"
+        parent="menu_ecosphere_root"
+        sequence="7"/>
+
+</odoo>
